@@ -1,0 +1,140 @@
+ <div ng-controller="SafetyVidCtrl">
+ <h3 if-user>Hello, {{user.fullName}}</h3>
+
+
+ <!-- Demo Bar start -->
+<div id="demo-top-bar">
+	<h1>RUSH Personnel Services, Inc.</h1>
+</div>
+
+<div class="well ng-scope" ui-view="viewA"><span class="ng-scope"><h2>Safety Training Multiple Choice Quiz</h2></span></div>
+
+<!-- Demo Bar end -->
+	    <div class="qcont" class="container">
+	    <div class="row">
+	    <div class="col-xs-12">
+		<form name="quiz">
+		<ol>
+			<div class="questions">
+		<!-- question # 1 -->
+			<li>Your employer wants a safe workplace because:</li>
+				<input type="radio" name="q1" value="wrong"> A) Your employer is concerned of rhte health and safety of the workers.</input></br>
+				<input type="radio" name="q1" value="wrong"> B) Accidents cost money, cause loss of productivity, lower morale and raise medical costs.</input></br>
+				<input type="radio" name="q1" value="correct"> C) Both A and B.</input></br>
+
+			</br>
+
+		<!-- question # 2 -->
+			<li>Accidents:</li>
+				<input type="radio" name="q2" value="wrong"> A) Are rare</input></br>
+				<input type="radio" name="q2" value="wrong"> B) Only happen to other people</input></br>
+				<input type="radio" name="q2" value="correct"> C) Require no training and are the easiest thing in the world.</input></br>
+			</br>
+
+		<!-- question # 3 -->
+			<li>Accidents happen most frequently when: </li>
+				<input type="radio" name="q3" value="wrong"> A) You first get to work</input></br>
+				<input type="radio" name="q3" value="wrong"> B) When you are in a hurry</input></br>
+				<input type="radio" name="q3" value="wrong"> C) When you are tired</input></br>
+				<input type="radio" name="q3" value="wrong"> D) Right after lunch</input></br>
+				<input type="radio" name="q3" value="correct"> E) Both B and C</input></br>
+			</br>
+
+		<!-- question # 4 -->
+			<li>The reason(s) most accidents occur are: </li>
+				<input type="radio" name="q4" value="wrong"> A) Not following recommended procedures</input></br>
+				<input type="radio" name="q4" value="wrong"> B) Lack of proper training</input></br>
+				<input type="radio" name="q4" value="wrong"> C) Using proper tools</input></br>
+				<input type="radio" name="q4" value="wrong"> D) Not paying attention</input></br>
+				<input type="radio" name="q4" value="correct"> E) A, B and D</input></br>
+				<input type="radio" name="q4" value="wrong"> F) B, C and D</input></br>
+			</br>
+
+		<!-- question # 5 -->
+			<li>Report only seriouse accents and safety hazards to your supervisor.</li>
+				<input type="radio" name="q5" value="wrong"> A) True</input></br>
+				<input type="radio" name="q5" value="correct"> B) False</input></br>
+			</br>
+
+		<!-- question # 6 -->
+			<li>To minimize back injuries:</li>
+				<input type="radio" name="q6" value="wrong"> A) Bend your knees</input></br>
+				<input type="radio" name="q6" value="wrong"> B) Lift with your legs</input></br>
+				<input type="radio" name="q6" value="wrong"> C) Keep your feet centered under you</input></br>
+				<input type="radio" name="q6" value="wrong"> D) Keep the load close to your body</input></br>
+				<input type="radio" name="q6" value="correct"> E) All of the above</input></br>
+				<input type="radio" name="q6" value="wrong"> F) None of the above</input></br>
+			</br>
+
+		<!-- question # 7 -->
+			<li>If you see a spill on the floor that could cause someone to slip and fall, you should: </li>
+				<input type="radio" name="q7" value="wrong"> A) Wipe it up as soon as you finish what your doing.</input></br>
+				<input type="radio" name="q7" value="correct"> B) Wipe it up immediately even if you have to stop what you are doing</input></br>
+				<input type="radio" name="q7" value="wrong"> C) Leave it for the person who spilled it</input></br>
+			</br>
+
+		<!-- question # 8 -->
+			<li>Protective equipment such as a hardhat, safety goggles, or gloves should: </li>
+				<input type="radio" name="q8" value="wrong"> A) Be worn if the protection is needed.</input></br>
+				<input type="radio" name="q8" value="wrong"> B) Should not be worn if they slow your work down</input></br>
+				<input type="radio" name="q8" value="wrong"> C) Should always fit properly</input></br>
+				<input type="radio" name="q8" value="wrong"> D) All of the above</input></br>
+				<input type="radio" name="q8" value="correct"> E) Both A and C</input></br>
+			</br>
+
+		<!-- question # 9 -->
+			<li>Which of the following safety hazards could cause shock or a burn?</li>
+				<input type="radio" name="q9" value="wrong"> A) Frayed cord</input></br>
+				<input type="radio" name="q9" value="wrong"> B) Steam</input></br>
+				<input type="radio" name="q9" value="wrong"> C) sink/faucet</input></br>
+				<input type="radio" name="q9" value="wrong"> D) Coffee pot</input></br>
+				<input type="radio" name="q9" value="wrong"> E) Oven</input></br>
+				<input type="radio" name="q9" value="wrong"> F) Water heater</input></br>
+				<input type="radio" name="q9" value="wrong"> G) All the above</input></br>
+			</br>
+
+		<!-- question # 10 -->
+			<li>Working with hazardous chemicals requires caution, but not special training.</li>
+				<input type="radio" name="q10" value="wrong"> A) True</input></br>
+				<input type="radio" name="q10" value="correct"> B) False</input></br>
+			</br>
+
+		<!-- question # 11 -->
+			<li>Even a normal office setting has potential safety hazards such as: </li>
+				<input type="radio" name="q11" value="wrong"> A) Open file drawers</input></br>
+				<input type="radio" name="q11" value="wrong"> B) Paper cutters</input></br>
+				<input type="radio" name="q11" value="wrong"> C) Telephone cords</input></br>
+				<input type="radio" name="q11" value="wrong"> D) Cords and wires</input></br>
+				<input type="radio" name="q11" value="wrong"> E) Toner containers</input></br>
+				<input type="radio" name="q11" value="wrong"> F) Clutter blocking exits</input></br>
+				<input type="radio" name="q11" value="correct"> G) All the above</input></br>
+			</br>
+		<!-- question # 12 -->
+			<li> In addition to this general safety training, you will need safety training which is specific to your own job</li>
+				<input type="radio" name="q12" value="correct"> A) True</input></br>
+				<input type="radio" name="q12" value="wrong"> B) False</input></br>
+			</br>
+		</ol>
+
+		<!-- Submit and Reset bottoms -->
+		<div ng-controller="safetyquizCtrl" align="center">
+			<input type="button" value="Submit" onclick="checkAll()" ng-click="addscore()" class="btn btn-primary round"></input>
+			<input type="button" onClick="history.go(0)" value="Reset" class="btn btn-default"></input></br></br></br>
+
+
+			<div style="display: none;">
+
+				<textarea rows="16" cols="50" name="answersBox">Your results will display here</textarea>
+
+			</div>
+
+			</div> <!-- questions div -->
+		</div> <!-- column div -->
+		</div>	<!-- row div -->
+		</div>  <!-- container div -->
+		</form>
+
+		<center><a ui-sref="safetyvid" ui-sref-active="active"><h6>Go back to the video</h6></a></center>
+		<br><br>
+	</div>
+</div>

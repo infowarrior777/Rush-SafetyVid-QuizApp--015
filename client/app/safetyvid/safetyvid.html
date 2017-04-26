@@ -1,0 +1,52 @@
+<!-- Demo Bar start -->
+<div id="demo-top-bar">
+	<h1>RUSH Personnel Services, Inc.</h1>
+</div>
+
+<div ><span ><h2>English Safety Training Video</h2></span></div>
+
+<!-- Demo Bar end -->
+
+
+
+<!-- <div class="container" ng-controller="SafetyVidCtrl">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>{{user.fullName}}'s Profile</h3>
+      <hr>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <pre ng-bind="user | json"></pre>
+    </div>
+  </div>
+</div>
+ -->
+
+ 
+<div class="container" ng-controller="SafetyVidCtrl">
+  <h3 if-user>Hello, {{user.fullName}}</h3>
+</div>
+	<h3>You will now be viewing a safety video. When it is finished please proceed with the safety quiz.<br>
+	 After completing the safety quiz please return to the frontdesk.</h3>
+	 
+	<center><video width="700" controls>
+  <source src="../assets/video/Safety-Video-English.mp4" type="video/mp4">
+  <source src="../assets/video/Safety-Video-English.ogg" type="video/ogg">
+  <video controls autoplay>
+  <source src="http://s3-us-west-1.amazonaws.com/foo/bar.mp4" type="video/mp4" />
+</video>
+  Your browser does not support HTML5 video.
+</video>
+
+</center>
+
+<!-- <p><center>
+Video courtesy of 
+<a href="http://www.rush-personnel.com/" target="_blank">RUSH Personnel Services, Inc.</a>.</center>
+</p> -->
+	<br><br>
+	<center><a ui-sref="safetyquiz" ui-sref-active="active" class="btn btn-primary round"><h4>Please click here to take the safety quiz</h4></a></center>

@@ -1,0 +1,94 @@
+<div class="container" ng-controller="TimeOffReqCtrl">
+	<h1><center><u>Time Off Request / Report Form</u></center></h1>
+	
+	<h3>Employee Name:</h3><input type="text" name="fname" ng-model="name"> 
+	<h3>Office Location:</h3>
+	<select ng-model="location">
+		<option value="chico">Chico Office</option>
+		<option value="colusa">Colusa Office</option>
+		<option value="redding">Redding Office</option>
+		<option value="yubacity">Yuba City Office</option>
+	</select>
+
+	<h2><u>ADVANCE REQUEST FOR TIME OFF:</u></h2>
+	<h4>I am requesting time-off for the following:</h4>
+	  <div ng-controller="TimeOffReqCtrl">
+		<div ng-repeat="employee in employees">
+			<div class="action-checkbox">
+				<input id="{{employee.name}}" type="checkbox" value="{{employee.name}}" ng-checked="selection.indexOf(employee.name) > -1" ng-click="toggleSelection(employee.name)" />
+				<label for="{{employee.name}}"></label>
+				{{employee.name}}
+			</div>
+		</div>
+
+<div class="selected-items-panel">
+	<span style="color:Blue;" class="selected-item">Selected Items:<span>
+		<div ng-repeat="name in selection" class="selected-item">
+		{{name}}
+		</div>
+	</div>
+
+
+	  </div>
+
+
+	<h4>(NOTE: Medical appointments should be requested as "sick leave")</h4>
+
+	<h3>Date(s) away from work:</h3>
+	<div>
+	<input id="datepicker1" /> 	 	to   	<input id="datepicker2" /><p>
+
+	<hr>
+	<h2><u>Absence Report</u></h2>
+	I was absent from <input id="datepicker3" />   		to   	<input id="datepicker4" /> for a total of <input type="textbox" name="absent_days"> day(s), # of hours <input type="textbox" name="absent_hours"><p><p>
+
+	Please apply to: <input type="checkbox" name="sickleavecheckbox">  Sick Leave 
+					 <input type="checkbox" name="vacationcheckbox">  Vacation
+					 <input type="checkbox" name="nonpaidcheckbox">  Non-paid
+
+	<h4>Reason for Absence:</h4><textarea rows="4" cols="50"></textarea><br>
+
+	<h3>Absence was reported to: </h3><input type="textarea" name="absense_reported_to">  VIA <input type="textarea" name="absence_via">  on <input id="datepicker5">
+
+	<hr>
+
+	<h2><u>BUY OUT/PAY OUT:</u></h2>  Vacation Hours: <input type="textarea" name="buyout_vacation">  Sick Leave Hours:  <input type="textarea" name="buyout_sickleave"><p>
+
+<p>
+	<h4>Employee Signature</h4> <input type="textarea" name="employee_signature">
+	<h4>Date</h4><input id="datepicker6" />
+</p>
+	
+
+	<!-- Datepicker start -->
+
+	
+
+	<!-- Datepicker end -->
+	<button type="button" class="btn btn-primary">Submit</button>
+	<button type="button" class="btn btn-default">Reset</button>
+
+
+	<br>
+	<br>
+	{{name}}
+	<br>
+	{{location}}
+<div ng-controller="checkBoxController">
+	
+   <div class="selected-items-panel">
+	<span style="color:Blue;" class="selected-item">Selected Items:<span>
+		<div ng-repeat="name in selection" class="selected-item">
+		{{name}}
+		</div>
+	</div>
+
+
+</div>
+
+
+</div><!-- end of container-fluid -->
+
+<div ng-show= "name" ng-controller="checkBoxController" ng-repeat="name in selection" class="selected-item">
+	{{name}}
+</div>

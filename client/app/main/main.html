@@ -1,0 +1,73 @@
+<div ng-controller="SafetyVidCtrl">
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Rush Personnel Services Inc.</h1>
+    <p class="lead">Find your People</p>
+    <img src="assets/images/note.png" alt="Clipboard">
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Latest Job Openings:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
+        <li><a href="http://jobs.rush-personnel.com/index.smpl?arg=jb_search_results&view=0" uib-tooltip="{{thing.info}}">{{thing.name}}<button if-user-in-group="coords" type="button" class="close" ng-click="$ctrl.deleteThing(thing)">&times;</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+<div class="container">
+  <h3 if-user>Welcome to Rush, {{user.fullName}}</h3>
+</div>
+
+
+<div if-not-user>
+  <h3>Welcome to Rush Personnel Staffing services inc. !</h3>
+  <br>
+  <h1>If you already have an account go ahead and log in here. If this is your first time here, Click here to get started applying for jobs.</h1>
+</div>
+
+<div if-user-in-group="admins">
+  <h3>You are logged in as admin</h3>
+</div>
+
+
+
+
+
+
+
+
+<div if-user-in-group="associates">
+  <h3>You are now considered a Rush Associate. You are logged in and able to browse for jobs and apply directly with just one click. You are also able to your watch your safety videos and take quizes.  </h3>
+</div>
+
+
+
+
+
+
+
+
+
+  <form if-user-in-group="coords">
+    <label><h1>Since you're logged in as a Rush Coordinator you may Delete and Post Latest Job Openings. A Link will be created that takes them to a page to review job details and apply.</h1></label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="$ctrl.newThing">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addThing()">Add New Job</button>
+      </span>
+    </p>
+  </form>
+
+
+
+
+
+
+
+</div>
+</div>

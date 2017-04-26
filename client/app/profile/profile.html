@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 if-user>Hello, {{user.fullName}}</h3>
+      <hr>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-xs-12">
+      <pre ng-bind="user | json"></pre>
+
+      <h1> Your username is the same as your email which is: {{user.username}}</h1>
+      <h1> Your first name is: {{user.givenName}}</h1>
+      <h1> Your last name is: {{user.surname}}</h1>
+      <h1> The last four of your social is: {{user.customData.lastfour}}</h1>
+      <br>
+
+      <h1> You are in group: {{user.groups.items[0].name}}</h1>
+      <br>
+
+      <h1> Your Rush safety video score is: {{user.customData.safetyvidscore}}</h1>
+
+      <h1> Your Rush safety video score from Mongodb is: {{$scope.person.safetyvidscore}}</h1>
+
+
+
+    </div>
+  </div>
+</div>
