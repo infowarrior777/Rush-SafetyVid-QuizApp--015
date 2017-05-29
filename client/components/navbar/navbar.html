@@ -36,7 +36,7 @@
             <a ui-sref="typingtest3">Typing Test</a>
         </li>
 
-        <li if-user ng-class="{active: isActive('/timeoffreq')}">
+        <li if-user-in-group="coords" ng-class="{active: isActive('/timeoffreq')}">
             <a ui-sref="timeoffreq">Time Off Request Form</a>
         </li>
 

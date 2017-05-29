@@ -8,7 +8,7 @@
  
   <div class="row">
     <div class="col-xs-12">
-      <pre ng-bind="user | json"></pre>
+      <!-- <pre ng-bind="user | json"></pre> -->
 
       <h1> Your username is the same as your email which is: {{user.username}}</h1>
       <h1> Your first name is: {{user.givenName}}</h1>
@@ -21,7 +21,10 @@
 
       <h1> Your Rush safety video score is: {{user.customData.safetyvidscore}}</h1>
 
-      <h1> Your Rush safety video score from Mongodb is: {{$scope.person.safetyvidscore}}</h1>
+      <h1> Your Rush typing test score is: {{user.customData.wpm}}</h1>
+
+
+     <!--  <h1> Your Rush safety video score from Mongodb is: {{$scope.person.safetyvidscore}}</h1> -->
 
 
 

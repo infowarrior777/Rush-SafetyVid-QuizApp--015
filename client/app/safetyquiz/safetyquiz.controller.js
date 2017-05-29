@@ -136,6 +136,35 @@ genPDF(); // invoking pdf generator function
 
 
 
+
+
+
+// $user.get()
+//     .then(function (user) {
+
+//       console.log('The current user is', user);
+//       $scope.user = user;
+
+
+      
+//       req.user.customData.safetyvidscore = $scope.person.svidscore
+//       req.user.customData.save();
+//     })
+//     .catch(function (error) {
+//       console.log('Error getting user', error);
+//     });
+
+
+
+
+
+
+
+
+
+
+
+
     $http.post('/api/safetyresultss', $scope.person);
 
     $http.post('/api/sendemails', $scope.person);

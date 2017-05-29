@@ -77,6 +77,11 @@ angular.module('dashboardApp')
     	time:     $scope.time[0]
     };
 
+    // req.user.customData.wpm = $scope.person.wpm
+    // req.user.customData.errs = $scope.person.errs
+    // req.user.customData.accuracy = $scope.person.accuracy
+    // req.user.customData.time = $scope.person.time
+
 console.log('The person object is', $scope.person);
 
 
@@ -106,6 +111,31 @@ console.log('The person object is', $scope.person);
 
 
 // End genPDF Function --------------------------------------------------------------------
+
+
+
+
+  // $user.get()
+  //   .then(function (user) {
+
+  //     console.log('The current user is', user);
+  //     $scope.user = user;
+
+
+  //     req.user.customData.wpm = $scope.person.wpm
+  //     req.user.customData.errs = $scope.person.errs
+  //     req.user.customData.accuracy = $scope.person.accuracy
+  //     req.user.customData.time = $scope.person.time
+  //     console.log('The current user after adding typing score is', user);
+  //   })
+  //   .catch(function (error) {
+  //     console.log('Error getting user', error);
+  //   });
+
+
+
+
+
 
 
 

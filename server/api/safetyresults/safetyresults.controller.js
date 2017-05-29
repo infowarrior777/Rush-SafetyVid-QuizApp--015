@@ -12,6 +12,36 @@
 import _ from 'lodash';
 import Safetyresults from './safetyresults.model';
 
+
+
+
+
+function addCustomData(req, res) {
+   req.user.customData.safetyvidscore = req.body.svidscore
+   req.user.customData.wpm = req.body.wpm
+      req.user.customData.errs = req.body.errs
+      req.user.customData.accuracy = req.body.accuracy
+      req.user.customData.time = req.body.time
+      req.user.customData.save();
+   
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;
   return function(entity) {
@@ -81,8 +111,17 @@ export function show(req, res) {
 export function create(req, res) {
   return Safetyresults.create(req.body)
     .then(respondWithResult(res, 201))
+    .then(addCustomData(req))
     .catch(handleError(res));
 }
+
+// // adds a new CustomData in the stormpathDB
+// export function addCustomData(req, res) {
+//   return Safetyresults.addCustomData(req.user)
+
+//     .then(respondWithResult(res, 201))
+//     .catch(handleError(res));
+// }
 
 // Updates an existing Safetyresults in the DB
 export function update(req, res) {
