@@ -94,6 +94,17 @@
     "proxyquire": "^1.0.1",
     "supertest": "^1.1.0"
   },
+
+"babel": {
+    "presets": [
+      "es2015"
+    ]
+},
+
+
+
+
+  
   "engines": {
     "node": "^4.4.0",
     "npm": "^2.14.20"
