@@ -4,6 +4,7 @@
   "main": "server/app.js",
   "dependencies": {
     "babel-polyfill": "^6.7.2",
+    "babel-preset-es2015": "^6.24.1",
     "babel-runtime": "^6.6.1",
     "bluebird": "^3.3.3",
     "body-parser": "^1.13.3",
@@ -94,17 +95,11 @@
     "proxyquire": "^1.0.1",
     "supertest": "^1.1.0"
   },
-
-"babel": {
+  "babel": {
     "presets": [
       "es2015"
     ]
-},
-
-
-
-
-  
+  },
   "engines": {
     "node": "^4.4.0",
     "npm": "^2.14.20"
