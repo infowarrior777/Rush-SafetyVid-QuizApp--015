@@ -13,7 +13,7 @@ import _ from 'lodash';
 import Sendemail from './sendemail.model';
 // import config from '/../../../server/config';
 
- var config = require('../../config/local.env.js');
+ // var config = require('../../config/local.env.js');
 
 /*function updateStormpathsvid(req,res){
   req.user.customData.safetyvidscore = req.body.svidscore;
@@ -42,9 +42,9 @@ import Sendemail from './sendemail.model';
 // console.log(fromEmailPw)
 var emailconfig = {};
 emailconfig =  {
-  fromEmail: config.fromEmail,
-  fromEmailPw: config.fromEmailPw,
-  toEmail: config.toEmail
+  fromEmail: process.env.fromEmail || config.fromEmail,
+  fromEmailPw: process.env.fromEmailPw || config.fromEmailPw,
+  toEmail: process.env.toEmail || config.toEmail
 };
 
 
@@ -63,8 +63,8 @@ function emailgo(req,res) {
 
 console.log('inside emailgo function')
 console.log(emailconfig.fromEmail)
-console.log(emailconfig.toEmail)
-console.log(emailconfig.fromEmailPw)
+console.log(process.env.toEmail)
+// console.log(emailconfig.fromEmailPw)
 
 // console.log(fromEmail)
 // console.log(toEmail)
@@ -81,16 +81,16 @@ var smtpConfig = {
     port: 465,
     secure: true, 
     auth: {
-        user: emailconfig.fromEmail,
-        pass: emailconfig.fromEmailPw
+        user:  process.env.fromEmail || emailconfig.fromEmail,
+        pass: process.env.fromEmailPw || emailconfig.fromEmailPw
     }
 };
 
 var transporter = nodemailer.createTransport(smtpConfig);
 
 var mailOptions = {
-    from: emailconfig.fromEmail, 
-    to: emailconfig.toEmail,
+    from: process.env.fromEmail || emailconfig.fromEmail, 
+    to: process.env.toEmail || emailconfig.toEmail,
     subject: req.body.name +" "+ req.body.lastfour + "'s Safety quiz Score", 
     text: 'test1', 
     html: req.body.svidscore + 'test2' 
