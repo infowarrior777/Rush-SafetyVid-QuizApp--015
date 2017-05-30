@@ -14,12 +14,15 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport();
 
 
-
-import express from 'express';
-import mongoose from 'mongoose';
+var express = require('express');
+// import express from 'express';
+var mongoose = require('mongoose');
+// import mongoose from 'mongoose';
 mongoose.Promise = require('bluebird');
-import config from './config/environment';
-import http from 'http';
+var config = require('./config/environment');
+// import config from './config/environment';
+var http = require('http');
+// import http from 'http';
 
 // Connect to MongoDB
 mongoose.connect(config.mongo.uri, config.mongo.options);
