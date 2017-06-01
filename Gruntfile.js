@@ -542,7 +542,8 @@ module.exports = function(grunt) {
           plugins: [
             'transform-class-properties',
             'transform-runtime'
-          ]
+          ],
+          presets: ['es2015']
         },
         files: [{
           expand: true,
