@@ -1,6 +1,6 @@
-# dashboard
+# Rush-SafetyVid-QuizApp--015
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.8.0.
+This project was scaffolded with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.8.0.
 
 ## Getting Started
 
